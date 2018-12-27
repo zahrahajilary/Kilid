@@ -1,0 +1,85 @@
+body {
+    padding: 4em;
+  }
+  input[type=range] {
+    box-sizing: border-box;
+    appearance: none;
+    width: 50%;
+    margin: 5px auto auto;
+    position: absolute;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 0 2px;
+    overflow: hidden;
+    border-radius: 1px;
+    outline: none;
+    background: linear-gradient(grey, grey) no-repeat center;
+    background-size: 100% 2px;
+    pointer-events: none;
+  }
+  input[type=range]:active,
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 28px;
+    width: 28px;
+    border-radius: 28px;
+    background-color: rgb(111, 79, 228);
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+    appearance: none;
+    pointer-events: all;
+    box-shadow: 0 1px 4px 0.5px rgba(0, 0, 0, 0.25);
+  }
+  input[type=range]::-webkit-slider-thumb::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 100%;
+    width: 2000px;
+    height: 2px;
+  }
+  .multi-range {
+    direction: rtl;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+    position: relative;
+    height: 50px;
+  }
+  .multi-range input[type=range] {
+    position: absolute;
+  }
+  .multi-range input[type=range]:nth-child(1)::-webkit-slider-thumb::before {
+    background-color: red;
+  }
+  .multi-range input[type=range]:nth-child(2) {
+    background: none;
+  }
+  .multi-range input[type=range]:nth-child(2)::-webkit-slider-thumb::before {
+    background-color: grey;
+  }
+  .pricebox{
+      direction: rtl;
+      display: flex;
+      width: 60%;
+      flex-direction: column;
+      align-content: center;
+  }
+  .price-show{
+      margin: 45px auto auto;
+  }
+
+  .ptitle {
+
+  }
+
+  .btn {
+      padding: 10px 25px;
+      background-color: rgb(111, 79, 228);
+      color: white;
+      font-weight: bolder;
+  }
